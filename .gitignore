@@ -16,3 +16,4 @@ JAM_AGENT_NOTIFICATION_TRACKER/__pycache__
 *.env
 Dockerfile
 static/
+frontend/

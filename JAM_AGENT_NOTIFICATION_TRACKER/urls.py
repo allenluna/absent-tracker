@@ -20,7 +20,7 @@ urlpatterns = [
     path('assets/VXIFooter-wDuAYXk4.png', serve_footer), 
     path('assets/VXI_Logo 1-BsslRYVi.png', serve_logo), 
     path('assets/index-C8AJcfwy.css', serve_css), 
-    path('assets/index-DlSSb6AL.js', serve_js), 
+    path('assets/index-DrivM5SK.js', serve_js), 
     path('assets/VXI-DfDsUEYA.ico', serve_ico), 
     re_path(r'', FrontendAppView.as_view()),
 

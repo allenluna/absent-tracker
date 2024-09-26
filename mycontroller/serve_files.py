@@ -12,7 +12,7 @@ def serve_css(request):
         raise Http404("CSS file not found")
 
 def serve_js(request):
-    js_path = os.path.join(settings.STATIC_ROOT,'assets', 'index-DlSSb6AL.js')
+    js_path = os.path.join(settings.STATIC_ROOT,'assets', 'index-DrivM5SK.js')
     try:
         with open(js_path, 'rb') as f:
             content = f.read()

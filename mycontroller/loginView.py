@@ -39,7 +39,7 @@ class SSO(APIView):
         # https://api.vxiusa.com/api/GlobalHR/Employees/FindEEByWinIDDomain
         #https://vxicareers.com/srv2-api/api/v1/login/GetEmpDetailsOnGlobalAPI?nt=jtayag&domain=VXIPHP
 
-        api_url = f"{os.environ.get("API_URL")}nt={username}&domain={domain}"
+        api_url = f'{os.environ.get("API_URL")}nt={username}&domain={domain}'
     
         # try:
         response = requests.get(api_url)

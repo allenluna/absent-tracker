@@ -19,5 +19,3 @@ app.yaml
 static/
 frontend/
 certs/
-staticfiles/admin
-staticfiles/rest_framework

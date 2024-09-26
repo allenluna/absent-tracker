@@ -1,0 +1,25 @@
+service: vxi-absent-tracker
+runtime: python312
+
+entrypoint: gunicorn -b :$PORT --timeout 0 JAM_AGENT_NOTIFICATION_TRACKER.wsgi:application
+
+env_variables:
+  DJANGO_SETTINGS_MODULE: JAM_AGENT_NOTIFICATION_TRACKER.settings
+  DB_USER: vxi-user
+  DB_PASS: qwerty
+  DB_NAME: VXI_AGENT_ABSENT_TRACKER
+  INSTANCE_HOST: 100.66.1.7 
+  DB_PORT: 5432
+  DB_ROOT_CERT: certs/server-ca.pem
+  DB_CERT: certs/client-cert.pem
+  DB_KEY: certs/client-key.pem
+  PRIVATE_IP: TRUE
+
+vpc_access_connector:
+  name: projects/prj-vxi-i-nonprd-te-tec99/locations/us-central1/connectors/tec99-connector1
+
+handlers:
+- url: /static
+  static_dir: JAM_AGENT_NOTIFICATION_TRACKER/staticfiles/
+- url: /.*
+  script: auto

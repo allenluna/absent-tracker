@@ -72,7 +72,7 @@ MIDDLEWARE = [
 #     "http://localhost:3000",  # React dev server
 # ]
 CORS_ALLOWED_ORIGINS = [
-    "https://vxi-absent-tracker-dot-prj-vxi-i-nonprd-te-tec99.uc.r.appspot.com",
+    # "https://vxi-absent-tracker-dot-prj-vxi-i-nonprd-te-tec99.uc.r.appspot.com",
     # "http://127.0.0.1:8000"
 ]
 
@@ -178,7 +178,7 @@ REACT_APP_DIR = os.path.join(BASE_DIR, 'frontend')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

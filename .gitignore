@@ -18,3 +18,4 @@ Dockerfile
 app.yaml
 static/
 frontend/
+certs/

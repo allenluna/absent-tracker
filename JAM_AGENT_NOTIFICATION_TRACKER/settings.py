@@ -36,9 +36,9 @@ SECRET_KEY = 'django-insecure-6u#srvy+mz69h%u6d1kigan32a!b8@7tc6hin-j+qtg9^q5e8e
 DEBUG = True
 
 
-# ALLOWED_HOSTS = ['.vercel.app'] #I'll make it * to allow diff hosts
-ALLOWED_HOSTS = ["*"]
-# WSGI_APPLICATION = 'api.wsgi.app'
+ALLOWED_HOSTS = ['.vercel.app'] #I'll make it * to allow diff hosts
+# ALLOWED_HOSTS = ["*"]
+WSGI_APPLICATION = 'api.wsgi.app'
 
 # Application definition
 
@@ -113,29 +113,29 @@ TEMPLATES = [
 WSGI_APPLICATION = 'JAM_AGENT_NOTIFICATION_TRACKER.wsgi.application'
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'VXI_AGENT_ABSENT_TRACKERR',
-        'USER': 'vxi-user',
-        'PASSWORD': 'qwerty',
-        'HOST': '100.66.1.7',
-        'PORT': '5432'
-    }
-}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'verceldb',
-#         'USER': 'default',
-#         'PASSWORD': 'ENdB4ypX3lMO',
-#         'HOST': 'ep-divine-truth-a44w9pp4.us-east-1.aws.neon.tech',
-#         'PORT': '5432',
-#         'OPTIONS': {
-#             'sslmode': 'require',
-#         },
+#         'NAME': 'VXI_AGENT_ABSENT_TRACKERR',
+#         'USER': 'vxi-user',
+#         'PASSWORD': 'qwerty',
+#         'HOST': '100.66.1.7',
+#         'PORT': '5432'
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': 'ENdB4ypX3lMO',
+        'HOST': 'ep-divine-truth-a44w9pp4.us-east-1.aws.neon.tech',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
+    }
+}
 
 
 # Password validation

@@ -36,7 +36,7 @@ SECRET_KEY = 'django-insecure-6u#srvy+mz69h%u6d1kigan32a!b8@7tc6hin-j+qtg9^q5e8e
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['.vercel.app', 'absent-tracker.vxisolutions'] #I'll make it * to allow diff hosts
+ALLOWED_HOSTS = ['.vercel.app', 'absent-tracker.vxisolutions.com'] #I'll make it * to allow diff hosts
 # ALLOWED_HOSTS = ["*"]
 WSGI_APPLICATION = 'api.wsgi.app'
 

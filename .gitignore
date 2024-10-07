@@ -14,9 +14,3 @@ JAM_AGENT_NOTIFICATION_TRACKER/__pycache__
 
 *.log
 *.env
-Dockerfile
-app.yaml
-static/
-frontend/
-certs/
-staticfiles/rest_framework

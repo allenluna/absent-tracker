@@ -15,4 +15,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'JAM_AGENT_NOTIFICATION_TRACKER.
 
 application = get_wsgi_application()
 
-app = application
+# app = application

@@ -9,7 +9,6 @@ __pycache__/
 frontend/node_modules/
 
 mycontroller/__pycache__
-mycontroller/migrations/
 JAM_AGENT_NOTIFICATION_TRACKER/__pycache__
 
 *.log

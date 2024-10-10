@@ -120,7 +120,7 @@ DATABASES = {
         'USER': 'vxi-user',
         'PASSWORD': 'qwerty',
         'HOST': '100.66.1.7',
-        'PORT': '5432'
+        'PORT': '8080'
     }
 }
 # DATABASES = {

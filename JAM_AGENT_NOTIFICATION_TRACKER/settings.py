@@ -37,7 +37,7 @@ DEBUG = True
 
 
 # ALLOWED_HOSTS = ['.vercel.app', 'absent-tracker.vxisolutions.com'] #I'll make it * to allow diff hosts
-ALLOWED_HOSTS = ["https://vxi-absent-tracker-127333559366.us-central1.run.app", '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ["vxi-absent-tracker.vxi.com", '127.0.0.1', 'localhost']
 # WSGI_APPLICATION = 'api.wsgi.app'
 
 # Application definition

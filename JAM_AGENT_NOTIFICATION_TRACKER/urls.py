@@ -1,11 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include, re_path
 from mycontroller.views import CreateUserView, LoggedInUserView, CurrentUserView, UserCreatedRequest, FrontendAppView
-from mycontroller.serve_files import serve_css, serve_footer, serve_js, serve_logo, serve_ico
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from django.conf import settings
 from django.conf.urls.static import static
-
+from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/user/register/', CreateUserView.as_view(), name="register"),
@@ -17,17 +15,7 @@ urlpatterns = [
     path('api/users/request/', UserCreatedRequest.as_view(), name='user_request'),
     path('api_auth/', include("rest_framework.urls")),
     path("api/", include("mycontroller.urls")),
-    path('assets/VXIFooter-wDuAYXk4.png', serve_footer), 
-    path('assets/VXI_Logo 1-BsslRYVi.png', serve_logo), 
-    path('assets/index-C8AJcfwy.css', serve_css), 
-    path('assets/index-DxqVUumT.js', serve_js), 
-    path('assets/VXI-DfDsUEYA.ico', serve_ico), 
-    re_path(r'', FrontendAppView.as_view()),
-
-
+    re_path(r'', TemplateView.as_view(template_name="index.html")),
 
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

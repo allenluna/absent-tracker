@@ -13,3 +13,8 @@ JAM_AGENT_NOTIFICATION_TRACKER/__pycache__
 
 *.log
 *.env
+frontend/
+certs/
+app.yaml
+vercel.json
+env/

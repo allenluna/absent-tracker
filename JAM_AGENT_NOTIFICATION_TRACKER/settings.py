@@ -100,7 +100,13 @@ DATABASES = {
         'USER': os.environ.get("DB_USER"),
         'PASSWORD': os.environ.get("DB_PASS"),
         'HOST': os.environ.get("DB_HOST"),
-        'PORT': os.environ.get("DB_PORT")
+        'PORT': os.environ.get("DB_PORT"),
+        'OPTIONS': {
+            'sslmode': 'verify-ca',
+            'sslrootcert': os.environ.get("SERVER_CA_PEM"), 
+            'sslcert': os.environ.get("CLIENT_CERT_PEM"), 
+            'sslkey': os.environ.get("CLIENT_KEY_PEM"),
+        }
     }
 }
 

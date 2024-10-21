@@ -2,10 +2,6 @@ from pathlib import Path
 from datetime import timedelta
 from dotenv import load_dotenv
 import os
-from google.cloud.sql.connector import Connector, IPTypes
-import pg8000
-import dj_database_url
-import sqlalchemy
 
 load_dotenv()
 
@@ -21,7 +17,6 @@ SECRET_KEY = 'django-insecure-6u#srvy+mz69h%u6d1kigan32a!b8@7tc6hin-j+qtg9^q5e8e
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 
 # ALLOWED_HOSTS = ['.vercel.app', 'absent-tracker.vxisolutions.com'] #I'll make it * to allow diff hosts
 ALLOWED_HOSTS = ["vxi-absent-tracker.vxi.com", '127.0.0.1', 'localhost']
@@ -92,6 +87,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'JAM_AGENT_NOTIFICATION_TRACKER.wsgi.application'
 
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
 
 DATABASES = {
     'default': {
@@ -101,12 +103,12 @@ DATABASES = {
         'PASSWORD': os.environ.get("DB_PASS"),
         'HOST': os.environ.get("DB_HOST"),
         'PORT': os.environ.get("DB_PORT"),
-        'OPTIONS': {
-            'sslmode': 'verify-ca',
-            'sslrootcert': os.environ.get("SERVER_CA_PEM"), 
-            'sslcert': os.environ.get("CLIENT_CERT_PEM"), 
-            'sslkey': os.environ.get("CLIENT_KEY_PEM"),
-        }
+        # 'OPTIONS': {
+        #     'sslmode': 'require',
+        #     'sslrootcert': os.environ.get("SERVER_CA_PEM"),
+        #     'sslcert': os.environ.get("CLIENT_CERT_PEM"),  
+        #     'sslkey': os.environ.get("CLIENT_KEY_PEM"),    
+        # }
     }
 }
 
@@ -150,7 +152,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

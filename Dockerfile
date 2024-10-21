@@ -36,4 +36,4 @@ EXPOSE 8080
 
 # CMD ["python", "JAM_AGENT_NOTIFICATION_TRACKER/manage.py", "runserver", "0.0.0.0:8080"]
 # CMD ["gunicorn", "--bind", "0.0.0.0:8080", "JAM_AGENT_NOTIFICATION_TRACKER.wsgi:application"]
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--timeout", "200", "JAM_AGENT_NOTIFICATION_TRACKER.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--timeout", "300", "JAM_AGENT_NOTIFICATION_TRACKER.wsgi:application"]

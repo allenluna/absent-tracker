@@ -48,7 +48,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -103,12 +102,6 @@ DATABASES = {
         'PASSWORD': os.environ.get("DB_PASS"),
         'HOST': os.environ.get("DB_HOST"),
         'PORT': os.environ.get("DB_PORT"),
-        # 'OPTIONS': {
-        #     'sslmode': 'require',
-        #     'sslrootcert': os.environ.get("SERVER_CA_PEM"),
-        #     'sslcert': os.environ.get("CLIENT_CERT_PEM"),  
-        #     'sslkey': os.environ.get("CLIENT_KEY_PEM"),    
-        # }
     }
 }
 
